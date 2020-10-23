@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<script>
+			function checkNumber()
+			{
+				var flag,number,remainder,addition = 0,i;
+				number = Number(document.getElementById("userinput").value);
+				flag = number;
+				for(i = 0; i < number; i++)
+				{
+					remainder = number%i;
+					if(remainder==0)
+					{
+						addition += i;
+					}
+				}
+				if(addition == flag)
+				{
+					document.getElementById("output").innerHTML ="Your number is perfect number";
+				}
+				else
+				{
+					document.getElementById("output").innerHTML ="Your number is  not perfect number";
+				}
+			}
+		</script>
+	</head>
+	<body style="background-color:#80cbc4;text-align:center;">
+	<br>
+	<h1>Check your number is Perfect or not</h1>
+	Enter The Number :<input type="text" name="num" id = "userinput"/>
+<button onClick="checkNumber()" style="background-color:#009688;color:white;">submit</button>
+    <p id="output"></p>
+	</body>
+</html>
